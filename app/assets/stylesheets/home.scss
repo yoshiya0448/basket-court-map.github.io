@@ -259,3 +259,11 @@ header {
         display: none;
     }
 }
+
+@media only screen and (min-width: 750px) {
+
+    .top-list .about-link {
+        display: none;
+    }
+
+}
