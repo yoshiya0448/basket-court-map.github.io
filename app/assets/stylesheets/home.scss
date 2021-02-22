@@ -252,7 +252,7 @@ header {
     clear: both;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
 
     .header-logo .login_username,
     .header-menus .about-link {
@@ -260,7 +260,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1000px) {
 
     .top-list .about-link {
         display: none;
