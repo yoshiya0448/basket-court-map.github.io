@@ -45,5 +45,7 @@
   <br>
   <% if user_signed_in? %>
   <%= link_to '新規投稿', new_court_path, class: "button is-info" %>
+  <br><br>
+  <%= link_to '新規カテゴリー', new_category_path %>
   <% end %>
 </div>
