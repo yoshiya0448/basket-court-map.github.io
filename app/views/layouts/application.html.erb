@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Basket Court Map</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+
+</head>
+
+<body>
+  <header>
+    <div class="header-logo">
+      <%= link_to("Basket Court Map","/") %>
+      <i class="fas fa-basketball-ball"></i>
+      <% if user_signed_in? %>
+      <p>ログイン中：<%= current_user.username %></p>
+      <% end %>
+    </div>
+    <ul class="header-menus">
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to "ログイン", new_user_session_path %>
+      </li>
+      <% end %>
+      <li>
+        <%= link_to("このアプリについて","/about") %>
+      </li>
+    </ul>
+  </header>
+
+  <% if flash[:notice] %>
+  <div class="notification is-info time-limit">
+    <p class="notice"><%= notice %></p>
+  </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+  <div class="notification is-danger">
+    <p class="alert"><%= alert %></p>
+  </div>
+  <% end %>
+  <%= yield %>
+</body>
+
+</html>
+
+<style>
+  .notification {
+    color: white;
+    background: rgb(251, 170, 88);
+    text-align: center;
+    position: absolute;
+    top: 64px;
+    z-index: 10;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    font-size: 14px;
+  }
+</style>

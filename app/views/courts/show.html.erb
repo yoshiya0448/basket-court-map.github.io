@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="show">
+  <p>
+    <strong>屋内・屋外：</strong>
+    <%= @court.category.name %>
+  </p>
+
+  <p>
+    <strong>コート名：</strong>
+    <%= @court.name %>
+  </p>
+
+  <p>
+    <strong>住所：</strong>
+    <%= @court.address %>
+  </p>
+
+  <p>
+    <strong>備考：</strong>
+    <%= @court.memo %>
+  </p>
+
+  <iframe src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["SECRET_KEY"] %>&q=<%= @court.address %>"
+    frameborder="1" width="100%" height="500px"></iframe>
+
+  <%= link_to '編集', edit_court_path(@court) %> |
+  <%= link_to '一覧に戻る', courts_path %>
+
+</div>

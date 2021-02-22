@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_id: 1
+  name: MyString
+  address: MyString
+  memo: MyString
+
+two:
+  category_id: 1
+  name: MyString
+  address: MyString
+  memo: MyString
