@@ -32,7 +32,7 @@
         <td><%= court.name %></td>
         <td><%= court.address %></td>
         <td><%= court.memo %></td>
-        <td><%= link_to '詳細', court %></td>
+        <td><%= link_to 'マップ', court %></td>
         <% if user_signed_in? %>
         <td><%= link_to '編集', edit_court_path(court) %></td>
         <td><%= link_to '削除', court, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></td>
