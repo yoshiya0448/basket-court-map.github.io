@@ -87,7 +87,7 @@ header {
     float: left;
     padding-left: 20px;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 64px;
 }
 
@@ -154,7 +154,7 @@ header {
 
 .top-message {
     position: relative;
-    font-size: 50px;
+    font-size: 40px;
     color: orange;
     text-shadow:
         2px 0 0 white,
@@ -252,4 +252,18 @@ header {
     clear: both;
 }
 
-/* フラッシュ ================================ */
+@media only screen and (max-width: 750px) {
+
+    .header-logo .login_username,
+    .header-menus .about-link {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+
+    .top-list .about-link {
+        display: none;
+    }
+
+}
