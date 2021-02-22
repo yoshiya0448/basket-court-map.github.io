@@ -18,7 +18,7 @@
       <%= link_to("Basket Court Map","/") %>
       <i class="fas fa-basketball-ball"></i>
       <% if user_signed_in? %>
-      <p>ログイン中：<%= current_user.username %></p>
+      <p class="login_username">ログイン中：<%= current_user.username %></p>
       <% end %>
     </div>
     <ul class="header-menus">
@@ -31,8 +31,8 @@
         <%= link_to "ログイン", new_user_session_path %>
       </li>
       <% end %>
-      <li>
-        <%= link_to("このアプリについて","/about") %>
+      <li class="about-link">
+        <%= link_to "このアプリについて", "/about" %>
       </li>
     </ul>
   </header>
