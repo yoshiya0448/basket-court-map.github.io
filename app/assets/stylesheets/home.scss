@@ -154,7 +154,7 @@ header {
 
 .top-message {
     position: relative;
-    font-size: 50px;
+    font-size: 40px;
     color: orange;
     text-shadow:
         2px 0 0 white,
@@ -252,4 +252,8 @@ header {
     clear: both;
 }
 
-/* フラッシュ ================================ */
+@media only screen and (max-width: 750px) {
+    .header-menus .about-link {
+        display: none;
+    }
+}
