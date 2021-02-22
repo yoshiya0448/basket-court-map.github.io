@@ -9,7 +9,10 @@
   <%= text_field_tag(:name_key) %>
   <%= submit_tag("検索", :class => "button is-info" ) %> <%= link_to '入力内容を削除する', courts_path %>
   <% end %>
-
+  <br>
+  <% if user_signed_in? %>
+  <%= link_to '新規投稿', new_court_path, class: "button is-info" %>
+  <% end %>
   <br>
   <div class="courts-list">
     バスケットコート 一覧
@@ -32,7 +35,7 @@
         <td><%= court.name %></td>
         <td><%= court.address %></td>
         <td><%= court.memo %></td>
-        <td><%= link_to 'マップ', court %></td>
+        <td><%= link_to '詳細', court %></td>
         <% if user_signed_in? %>
         <td><%= link_to '編集', edit_court_path(court) %></td>
         <td><%= link_to '削除', court, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></td>
@@ -43,7 +46,5 @@
   </table>
 
   <br>
-  <% if user_signed_in? %>
-  <%= link_to '新規投稿', new_court_path, class: "button is-info" %>
-  <% end %>
+  <%= link_to '新規カテゴリー', new_category_path %>
 </div>
