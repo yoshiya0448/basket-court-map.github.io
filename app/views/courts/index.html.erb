@@ -7,7 +7,7 @@
   <%= form_tag('/courts', method: 'get') do %>
   <%= label_tag(:name_key, 'コート名：') %>
   <%= text_field_tag(:name_key) %>
-  <%= submit_tag("検索", :class => "button is-info" ) %> <%= link_to '入力内容を削除する', courts_path %>
+  <%= submit_tag("検索", :class => "button is-info" ) %>
   <% end %>
 
   <br>
