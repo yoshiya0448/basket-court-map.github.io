@@ -17,9 +17,11 @@
     <div class="header-logo">
       <%= link_to("Basket Court Map","/") %>
       <i class="fas fa-basketball-ball"></i>
-      <% if user_signed_in? %>
-      <p>ログイン中：<%= current_user.username %></p>
-      <% end %>
+      <div class="login_username">
+        <% if user_signed_in? %>
+        <p>ログイン中：<%= current_user.username %></p>
+        <% end %>
+      </div>
     </div>
     <ul class="header-menus">
       <% if user_signed_in? %>
